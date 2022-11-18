@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Company;
 import com.example.demo.repository.CompanyRepository;
+import java.util.*;
 
 @Service
 public class CompanyServiceImpl implements CompanyServiceInterface {
@@ -23,11 +24,18 @@ public class CompanyServiceImpl implements CompanyServiceInterface {
 		companyRepository.deleteById(companyId);
 
 	}
-	/*
-	 * @Override public void addCompany(String companyName,Double sharePrice) { //
-	 * TODO Auto-generated method stub return companyRepository.save(company);
-	 * companyRepository.save(new Company(companyName,sharePrice)); }
-	 */
-
+	@Override
+	public void addCompany(Company company) {
+		// TODO Auto-generated method stub
+		  companyRepository.save(company);
+	}
+	@Override
+	public Company get(long companyId) {
+		// TODO Auto-generated method stub
+		Optional<Company> result = companyRepository.findById(companyId);
+        return  result.get();
+	}
+	
+	  
 }
 

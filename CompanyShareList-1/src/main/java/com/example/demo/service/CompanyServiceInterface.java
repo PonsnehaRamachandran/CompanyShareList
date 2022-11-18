@@ -9,8 +9,8 @@ public interface CompanyServiceInterface{
 	
 	List<Company> getAll();
 	public void deleteCompany(long companyId);
-	
-	//public void  addCompany(String companyName,Double sharePrice);
-	
+	public void addCompany(Company company);
+	 public Company get(long companyId);
+		
 
 }

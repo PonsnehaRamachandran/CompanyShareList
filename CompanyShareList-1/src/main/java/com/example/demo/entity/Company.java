@@ -17,11 +17,11 @@ public class Company {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "companyid")
-	private Long companyId;
+	private long companyId;
 	@Column(name = "companyname")
 	private String companyName;
 	@Column(name = "shareprice")
-	private Double sharePrice;
+	private double sharePrice;
 
 	public Company() {
 		super();
